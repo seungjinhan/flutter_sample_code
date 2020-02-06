@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:st_01/main.dart';
 
 class ThemePage extends StatelessWidget {
   @override
@@ -21,6 +22,17 @@ class MyHome extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('theme Exam'),
+        actions: <Widget>[
+          IconButton(
+              icon: const Icon(Icons.home),
+              tooltip: 'Home',
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute<void>(builder: (BuildContext context) {
+                  return MyApp();
+                }));
+              }),
+        ],
       ),
       body: Container(
         decoration: BoxDecoration(color: Colors.black87),
